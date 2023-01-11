@@ -1,0 +1,40 @@
+.slider {
+    height: calc(100vh - 80px);
+    width: 100vw;
+    position: absolute;
+
+    .container {
+        width: 300vw;
+        height: 100%;
+        display: flex;
+        // transform: translateX(
+        //     -100vw
+        // ); //menggeser image menyesuaikan dengan lebar / tampilan layar masing-masing
+        transition: all 1s ease;
+        img {
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .icons {
+        width: fit-content; //100px; /* kenapa bisa 100px bisa ke tengah ? apa karena slider  widht: 100vw?? */
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 100px;
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+}
