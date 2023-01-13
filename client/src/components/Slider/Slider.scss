@@ -1,7 +1,9 @@
 .slider {
     height: calc(100vh - 80px);
     width: 100vw;
-    position: absolute;
+    max-width: 100%; //menghilangkan scroll horizontal yang di akibat kan widht: 100vw
+    position: relative;
+    overflow: hidden;
 
     .container {
         width: 300vw;
@@ -20,12 +22,12 @@
     .icons {
         width: fit-content; //100px; /* kenapa bisa 100px bisa ke tengah ? apa karena slider  widht: 100vw?? */
         display: flex;
-        gap: 10px;
         position: absolute;
         left: 0;
         right: 0;
-        margin: auto;
         bottom: 100px;
+        gap: 10px;
+        margin: auto;
 
         .icon {
             width: 50px;
