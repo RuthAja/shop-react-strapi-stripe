@@ -35,7 +35,7 @@ export const Products = () => {
                             type="range"
                             name="filterPrice"
                             min={0}
-                            max={99999}
+                            max={1000}
                             onChange={(e) => setMaxPrice(e.target.value)}
                         />
                         <span>{maxPrice}</span>
