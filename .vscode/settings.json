@@ -1,5 +1,5 @@
 {
     "editor.letterSpacing": 1.25,
-    "oneDarkPro.italic": true,
+    "oneDarkPro.italic": false,
     "inline-parameters.fontStyle": "italic"
 }

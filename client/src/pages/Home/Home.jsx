@@ -1,17 +1,17 @@
-import React from "react";
-import { Categories } from "../../components/Categories/Categories";
-import { Contact } from "../../components/Contact/Contact";
-import { FeaturedProducts } from "../../components/FeaturedProducts/FeaturedProducts";
-import { Slider } from "../../components/Slider/Slider";
+import React from 'react'
+import { Categories } from '../../components/Categories/Categories'
+import { Contact } from '../../components/Contact/Contact'
+import { FeaturedProducts } from '../../components/FeaturedProducts/FeaturedProducts'
+import { Slider } from '../../components/Slider/Slider'
 
 export const Home = () => {
     return (
-        <div className="home">
+        <div className='home'>
             <Slider />
-            <FeaturedProducts type="featured" />
+            <FeaturedProducts type='featured' />
             <Categories />
-            <FeaturedProducts type="trending" />
+            <FeaturedProducts type='trending' />
             <Contact />
         </div>
-    );
-};
+    )
+}

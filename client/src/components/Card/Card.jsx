@@ -1,41 +1,37 @@
-import React from "react";
-import "./Card.scss";
-import { Link } from "react-router-dom";
+import React from 'react'
+import './Card.scss'
+import { Link } from 'react-router-dom'
 
 export const Card = ({ item }) => {
     return (
-        <Link className="link" to={`/product/${item.id}`}>
-            <div className="card">
-                <div className="image">
+        <Link className='link' to={`/product/${item.id}`}>
+            <div className='card'>
+                <div className='image'>
                     {item?.attributes.isNew && <span>New Season</span>}
                     {/* jika ada isNew
                     maka span keluar */}
                     <img
-                        src={
-                            process.env.REACT_APP_UPLOAD_URL +
-                            item?.attributes?.img?.data?.attributes?.url
-                        }
-                        alt=""
-                        className="mainImg"
+                        src={process.env.REACT_APP_UPLOAD_URL + item.attributes?.img?.data?.attributes?.url}
+                        alt=''
+                        className='mainImg'
                     />
                     {/* {item.img2 && (
                         <img src={item.img2} alt="" className="secondImg" />
                     )} */}
-                    <img
-                        src={
-                            process.env.REACT_APP_UPLOAD_URL +
-                            item?.attributes?.img2?.data?.attributes?.url
-                        }
-                        alt=""
-                        className="secondImg"
-                    />
+                    {item.attributes.img2.data && (
+                        <img
+                            src={process.env.REACT_APP_UPLOAD_URL + item.attributes?.img2?.data?.attributes?.url}
+                            alt=''
+                            className='secondImg'
+                        />
+                    )}
                 </div>
                 <h2>{item?.attributes.title}</h2>
-                <div className="prices">
-                    <h3>${item.oldPrice || item?.attributes.price + 20}</h3>
+                <div className='prices'>
+                    <h3>${item?.attributes.price + 20}</h3>
                     <h3>${item?.attributes.price}</h3>
                 </div>
             </div>
         </Link>
-    );
-};
+    )
+}
